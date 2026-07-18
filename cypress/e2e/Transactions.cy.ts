@@ -5,8 +5,7 @@ describe("Transactions page", () => {
     cy.get('[data-testid="nav-transactions"]').click();
   });
 
-  it("Should paginate transactions correctly", () => {
-    // Page 1 validation
+  it("Page through the transactions table and assert the page indicator", () => {
 
     cy.get('[data-testid="current-page"]').should("contain", "1");
 
@@ -29,5 +28,13 @@ describe("Transactions page", () => {
             expect(pageTwoRow).not.equal(pageOneRow);
           });
       });
+  });
+
+  it("Navigate to the last page", () => {
+    for (let i = 0; i < 4; i++) {
+      cy.get('[data-testid="next-page"]').click();
+    }
+
+    cy.get('[data-testid="current-page"]').should("contain", "5");
   });
 });

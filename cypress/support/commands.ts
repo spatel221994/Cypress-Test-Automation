@@ -62,6 +62,7 @@ declare global {
   interface Chainable {
 
     login(): Chainable<void>;
+    drag(target: string): Chainable<Element>;
 
   }
 
