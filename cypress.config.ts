@@ -4,6 +4,9 @@ import mochawesome from "cypress-mochawesome-reporter/plugin";
 export default defineConfig({
   allowCypressEnv: false,
   reporter: "cypress-mochawesome-reporter",
+  video: true,
+  videoCompression: 32,
+  trashAssetsBeforeRuns: true,
 
   reporterOptions: {
     charts: true,
