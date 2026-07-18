@@ -5,8 +5,8 @@
       "ES2020",
       "DOM"
     ],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "Node16",
+    "moduleResolution": "node16",
     "types": [
       "cypress",
       "node"
